@@ -217,13 +217,13 @@ Adafruit_Sensor *Adafruit_SHTC3::getTemperatureSensor(void) {
   return temp_sensor;
 }
 /**
- * @brief  Gets the sensor_t object describing the SHTC3's humidity sensor
+ * @brief  Gets the sensor_adafruit_t object describing the SHTC3's humidity sensor
  *
- * @param sensor The sensor_t object to be populated
+ * @param sensor The sensor_adafruit_t object to be populated
  */
-void Adafruit_SHTC3_Humidity::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_SHTC3_Humidity::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "SHTC3_H", sizeof(sensor->name) - 1);
@@ -247,13 +247,13 @@ bool Adafruit_SHTC3_Humidity::getEvent(sensors_event_t *event) {
   return true;
 }
 /**
- * @brief  Gets the sensor_t object describing the SHTC3's tenperature sensor
+ * @brief  Gets the sensor_adafruit_t object describing the SHTC3's tenperature sensor
  *
- * @param sensor The sensor_t object to be populated
+ * @param sensor The sensor_adafruit_t object to be populated
  */
-void Adafruit_SHTC3_Temp::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_SHTC3_Temp::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "SHTC3_T", sizeof(sensor->name) - 1);
